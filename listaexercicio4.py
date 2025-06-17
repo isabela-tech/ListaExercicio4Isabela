@@ -69,7 +69,7 @@ st.pyplot(fig)
 - Altere o nome da coluna "VALUE ((% a.a.))" para "IPCA"
 - Apresente a df para checar se tudo deu certo
 """
-import ipeadata as ip
+import ipeadatapy as ip
 
 df_ipca = ip.timeseries('PRECOS12_IPCA12')
 df_ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=2025)
