@@ -85,6 +85,7 @@ df_ipca = df_ipca.rename(columns={
     "VALUE (-)": 'IPCA'
 })
 
+
 st.write("Colunas após a renomeação:")
 st.write(df_ipca.columns)
 
