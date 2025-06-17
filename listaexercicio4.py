@@ -75,7 +75,7 @@ import ipeadatapy as ip
 import ipeadata as pd
 
 df_ipca = ip.timeseries('PRECOS12_IPCA12')
-df_ipca = df_ipca[(df_ipca['YEAR'] >= 2010) & (df_ipca['YEAR'] <= 2024)]
+ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=2025)
 
 st.write("Colunas antes da renomeação:")
 st.write(df_ipca.columns)
