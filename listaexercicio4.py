@@ -76,7 +76,7 @@ df_ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=20
 
 df_ipca = df_ipca.rename(columns={
     'YEAR': 'Ano',
-    "VALUE ((% a.a.)": 'IPCA'
+    "VALUE ((% a.a.))": 'IPCA'
 })
 
 st.dataframe(df_ipca)
