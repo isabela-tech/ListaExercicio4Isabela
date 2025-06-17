@@ -93,7 +93,7 @@ st.dataframe(df_ipca)
 receita_real = pd.merge(df, df_ipca, on='Ano')
 receita_real['Receita Real'] = receita_real['Receita Líquida'] - (receita_real['Receita Líquida'] * (receita_real['IPCA'] / 100))
 
-display(receita_real.head())
+st.dataframe(receita_real.head())
 
 """6) Crie gráfico de linha que apresente as variáveis Receita Líquida e Receita Real ao longo dos anos (no mesmo gráfico) (peso: 1,0)"""
 
