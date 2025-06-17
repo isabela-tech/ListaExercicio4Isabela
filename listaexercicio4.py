@@ -35,7 +35,7 @@ Dica: Utilize `head(len(df))`
 import pandas as pd
 
 df = pd.read_csv("/content/empresas_dados.csv", sep=';')
-df.head(len(df))
+st.dataframe(df.head(len(df)))
 
 """3) Calcule os indicadores Margem Líquida e ROA e salve como novas coluna da df. Depois apresente os dois indicadores no mesmo gráfico de linhas, agrupado por Ano  (peso: 1,0)
 
@@ -50,16 +50,17 @@ df['ROA'] = (df['Lucro Líquido'] / df['Ativo Total']) * 100
 
 df_agrupado = df.groupby('Ano')[['Margem_Liquida', 'ROA']].mean().reset_index()
 
-plt.figure(figsize=(10, 6))
+st.dataframe(df)
+fig, ax = plt.subplots(figsize=(10,6))
 plt.plot(df_agrupado['Ano'], df_agrupado['Margem_Liquida'], marker='o', label='Margem Líquida')
 plt.plot(df_agrupado['Ano'], df_agrupado['ROA'], marker='s', label='ROA')
 
-plt.title('Margem Líquida e ROA por Ano')
-plt.xlabel('Ano')
-plt.ylabel('%')
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+ax.set_title('Margem Líquida e ROA por Ano')
+ax.set_xlabel('Ano')
+ax.set_ylabel('%')
+ax.grid(True)
+ax.set_
+st.pyplot(fig)
 
 """4) Utilize o pacote ipeadatapy e faça busca para encontrar o indicador que traga o IPCA, taxa de variação, em % e anual: (peso: 2,0)
 
