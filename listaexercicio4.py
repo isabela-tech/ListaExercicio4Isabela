@@ -105,7 +105,7 @@ fig, ax = plt.subplots(figsize=(10,6))
 ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Líquida'], marker='o', label='Receita Líquida')
 ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Real'], marker='s', label='Receita Real')
 
-ax.set_titletitle('Receita Líquida e Receita Real por Ano')
+ax.set_title('Receita Líquida e Receita Real por Ano')
 ax.set_xlabel('Ano')
 ax.set_ylabel('Valor')
 ax.legend()
