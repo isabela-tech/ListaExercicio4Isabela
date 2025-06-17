@@ -73,6 +73,8 @@ st.pyplot(fig)
 
 import ipeadatapy as ip
 
+
+st.dataframe(df)
 ip.metadata()
 
 ip.list_series('IPCA')
