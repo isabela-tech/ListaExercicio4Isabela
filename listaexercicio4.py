@@ -71,7 +71,7 @@ st.pyplot(fig)
 """
 
 
-import streamlit as st
+import ipeadatapy as ip
 import ipeadata as pd
 
 df_ipca = ip.timeseries( 'PRECOS12_IPCA12')
