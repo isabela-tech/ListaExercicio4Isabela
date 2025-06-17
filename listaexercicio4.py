@@ -73,22 +73,15 @@ st.pyplot(fig)
 
 import streamlit as st
 
-st.dataframe(df)
+ip.metadata()
 
-metadata = ip.metadata()
-st.text(metadata)
+ip.list_series('IPCA')
 
-series_list = ip.list_series('IPCA')
-st.write("Séries IPCA:", series_list)
-
-descricao = ip.describe('PRECOS_IPCAG')
-st.write("Descrição PRECOS_IPCAG:", descricao)
+ip.describe('PRECOS_IPCAG')
 
 ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=2025)
 
-ipca_df = ipca.rename(columns={'YEAR': 'Ano', 'VALUE ((% a.a.))': 'IPCA'})
-
-st.dataframe(ipca_df.head())
+ipca = ipca_df.rename(columns={'YEAR': 'Ano', 'VALUE ((% a.a.))': 'IPCA'})
 
 display(ipca_df.head())
 
