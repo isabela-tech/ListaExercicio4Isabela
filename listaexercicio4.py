@@ -103,9 +103,10 @@ display(receita_real.head())
 receita_agrupada_por_ano = receita_real.groupby('Ano')[['Receita Líquida', 'Receita Real']].mean().reset_index()
 
 
-plt.figure(figsize=(10, 6))
-plt.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Líquida'], marker='o', label='Receita Líquida')
-plt.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Real'], marker='s', label='Receita Real')
+st.dataframe(df)
+fig, ax = plt.subplots(figsize=(10,6))
+ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Líquida'], marker='o', label='Receita Líquida')
+ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Real'], marker='s', label='Receita Real')
 
 ax.set_titletitle('Receita Líquida e Receita Real por Ano')
 ax.set_xlabel('Ano')
