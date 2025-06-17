@@ -59,7 +59,7 @@ ax.set_title('Margem Líquida e ROA por Ano')
 ax.set_xlabel('Ano')
 ax.set_ylabel('%')
 ax.grid(True)
-ax.set_
+fig.tight_layout()
 st.pyplot(fig)
 
 """4) Utilize o pacote ipeadatapy e faça busca para encontrar o indicador que traga o IPCA, taxa de variação, em % e anual: (peso: 2,0)
