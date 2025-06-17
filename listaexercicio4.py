@@ -73,6 +73,7 @@ st.pyplot(fig)
 
 import ipeadatapy as ip
 
+
 df_ipca = ip.timeseries('PRECOS12_IPCA12')
 df_ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=2025)
 
