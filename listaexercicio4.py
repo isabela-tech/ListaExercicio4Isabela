@@ -90,7 +90,7 @@ st.dataframe(df_ipca)
 
 """
 
-receita_real = pd.merge(df, ipca_df, on='Ano')
+receita_real = pd.merge(df, df_ipca, on='Ano')
 receita_real['Receita Real'] = receita_real['Receita Líquida'] - (receita_real['Receita Líquida'] * (receita_real['IPCA'] / 100))
 
 display(receita_real.head())
