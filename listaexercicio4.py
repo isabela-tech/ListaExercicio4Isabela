@@ -34,7 +34,7 @@ Dica: Utilize `head(len(df))`
 
 import pandas as pd
 
-df = pd.read_csv("/content/empresas_dados.csv", sep=';')
+df = pd.read_csv("empresas_dados.csv", sep=';')
 st.dataframe(df.head(len(df)))
 
 """3) Calcule os indicadores Margem Líquida e ROA e salve como novas coluna da df. Depois apresente os dois indicadores no mesmo gráfico de linhas, agrupado por Ano  (peso: 1,0)
