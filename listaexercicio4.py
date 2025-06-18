@@ -71,7 +71,6 @@ st.pyplot(fig)
 """
 import ipeadatapy as ip
 
-df_ipca = ip.timeseries('PRECOS12_IPCA12')
 df_ipca = ip.timeseries('PRECOS_IPCAG', yearGreaterThan=2009, yearSmallerThan=2025)
 
 df_ipca = df_ipca.rename(columns={
@@ -79,7 +78,11 @@ df_ipca = df_ipca.rename(columns={
     "VALUE ((% a.a.))": 'IPCA'
 })
 
+display(df_ipca.head()) 
+
 st.dataframe(df_ipca)
+
+
 
 
 """5) Combine as duas df (Excel e IPEA) em uma nova df e calcule nova coluna chamada Receita Real (peso: 2,0)
