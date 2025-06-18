@@ -108,7 +108,7 @@ ax.set_xlabel('Ano')
 ax.set_ylabel('Valor')
 ax.legend()
 ax.grid(True)
-plt.tight_layout()
+fig.tight_layout()
 
 st.pyplot(fig)
 
