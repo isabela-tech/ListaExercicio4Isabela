@@ -99,9 +99,7 @@ st.dataframe(receita_real.head())
 
 receita_agrupada_por_ano = receita_real.groupby('Ano')[['Receita Líquida', 'Receita Real']].mean().reset_index()
 
-
-st.dataframe(df)
-fig, ax = plt.subplots(figsize=(10,6))
+fig, ax = plt.subplots(figsize=(10, 6))
 ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Líquida'], marker='o', label='Receita Líquida')
 ax.plot(receita_agrupada_por_ano['Ano'], receita_agrupada_por_ano['Receita Real'], marker='s', label='Receita Real')
 
@@ -110,7 +108,8 @@ ax.set_xlabel('Ano')
 ax.set_ylabel('Valor')
 ax.legend()
 ax.grid(True)
-fig.tight_layout()
+plt.tight_layout()
+
 st.pyplot(fig)
 
 """7) Faça os ajustes necessários e leve este projeto para a web usando GitHub e Streamlit (peso: 2,0)
